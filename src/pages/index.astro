@@ -1,11 +1,8 @@
 ---
-// 1. زانیارییەکان لێرە بگۆڕە بۆ کڕیارەکە
+// 1. زانیارییەکان لێرە بگۆڕە
 const profile_image = "https://via.placeholder.com/150"; 
 const business_name = "ناوی کڕیار لێرە بنووسە";
 const business_bio = "جۆری ئیشەکە لێرە بنووسە";
-
-// 2. لۆگۆی خۆت لێرە دابنێ (لینکی وێنەکە)
-const my_logo = "https://razwanbusiness.netlify.app/logo.png"; // لێرە لینکی لۆگۆکەی خۆت دابنێ
 ---
 
 <!DOCTYPE html>
@@ -43,6 +40,7 @@ const my_logo = "https://razwanbusiness.netlify.app/logo.png"; // لێرە لی�
 
         .links-wrapper { width: 100%; max-width: 380px; display: flex; flex-direction: column; gap: 14px; }
 
+        /* ستایلی گشتی دوگمەکان */
         .btn {
             display: flex; align-items: center; justify-content: center;
             padding: 16px; border-radius: 14px; text-decoration: none;
@@ -51,53 +49,29 @@ const my_logo = "https://razwanbusiness.netlify.app/logo.png"; // لێرە لی�
         }
 
         .btn:hover { transform: scale(1.02); filter: brightness(1.1); }
-        .btn i { position: absolute; right: 20px; font-size: 22px; color: inherit !important; }
+        
+        /* چاککردنی ئایکۆنەکان بۆ ئەوەی سپێتی دروست نەکەن */
+        .btn i { 
+            position: absolute; right: 20px; font-size: 22px; 
+            background: none !important; /* لابردنی هەر باکگراوندێکی ناو ئایکۆن */
+            -webkit-background-clip: unset !important;
+        }
 
+        /* ڕەنگی دوگمەکان و دەقەکان */
         .whatsapp { background-color: #25D366; color: #ffffff !important; }
-        .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #ffffff !important; }
+        .instagram { 
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); 
+            color: #ffffff !important; 
+        }
         .telegram { background-color: #0088cc; color: #ffffff !important; }
         .snapchat { background-color: #fffc00; color: #000000 !important; }
         .viber { background-color: #7360f2; color: #ffffff !important; }
         .facebook { background-color: #1877f2; color: #ffffff !important; }
 
-        /* بەشی براندینگی خۆت (Footer) */
-        .my-brand {
-            margin-top: auto;
-            padding-top: 60px;
-            text-align: center;
-            width: 100%;
-        }
+        /* دڵنیابوونەوە لەوەی ئایکۆنەکان ڕەنگیان وەک دەقەکەیە */
+        .btn i { color: inherit !important; }
 
-        .brand-link {
-            display: inline-flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .brand-link:hover { opacity: 0.8; transform: translateY(-2px); }
-
-        .my-logo {
-            width: 50px;
-            height: 50px;
-            border-radius: 10px;
-            margin-bottom: 8px;
-            box-shadow: 0 4px 10px rgba(88, 166, 255, 0.2);
-        }
-
-        .brand-text {
-            font-size: 12px;
-            color: #8b949e;
-            letter-spacing: 0.5px;
-        }
-
-        .brand-name {
-            color: var(--accent);
-            font-weight: bold;
-            display: block;
-            margin-top: 4px;
-        }
+        footer { margin-top: auto; color: #8b949e; font-size: 11px; padding-top: 50px; }
     </style>
 </head>
 <body>
@@ -117,15 +91,24 @@ const my_logo = "https://razwanbusiness.netlify.app/logo.png"; // لێرە لی�
             <i class="fab fa-instagram"></i> Instagram
         </a>
 
-        </div>
-
-    <footer class="my-brand">
-        <a href="https://wa.me/message/OT6XAQOZJJJRO1" class="brand-link" target="_blank">
-            <img src={my_logo} alt="Razwan Business Logo" class="my-logo">
-            <span class="brand-text">سپۆنسەر کراوە لە لایەن:</span>
-            <span class="brand-name">Razwan Business</span>
+        <a href="https://t.me/username" class="btn telegram">
+            <i class="fab fa-telegram"></i> Telegram
         </a>
-    </footer>
+
+        <a href="https://snapchat.com/add/username" class="btn snapchat">
+            <i class="fab fa-snapchat"></i> Snapchat
+        </a>
+
+        <a href="viber://chat?number=964750xxxxxxx" class="btn viber">
+            <i class="fab fa-viber"></i> Viber
+        </a>
+
+        <a href="https://facebook.com/username" class="btn facebook">
+            <i class="fab fa-facebook"></i> Facebook
+        </a>
+    </div>
+
+    <footer>POWERED BY RABAR BUSINESS</footer>
 
 </body>
 </html>
