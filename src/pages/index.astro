@@ -1,19 +1,59 @@
----
-import Layout from '../layouts/Layout.astro';
-import Markdown from '../components/Markdown.astro';
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aram Adeeb Kakae</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3a8a, #000);
+            color: white;
+            font-family: Tahoma, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #3b82f6;
+            margin-bottom: 15px;
+        }
+        h1 { font-size: 22px; margin: 5px 0; }
+        p { color: #60a5fa; margin-bottom: 25px; }
+        .link-btn {
+            width: 85%;
+            max-width: 350px;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s;
+        }
+        .link-btn:hover { transform: scale(1.05); }
+        .whatsapp { background-color: #25d366; }
+        .instagram { background-color: #e1306c; }
+        .call { background-color: #facc15; color: black; }
+    </style>
+</head>
+<body>
+    <img src="وێنەکەت لێرە دابنێ" alt="Profile" class="profile-img">
+    <h1>Aram Adeeb Kakae</h1>
+    <p>Marketing & Sales Consultant</p>
 
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
+    <a href="https://wa.me/ژمارەکەت" class="link-btn whatsapp">کلیک بکە بۆ نامەی واتسئەپ</a>
+    <a href="https://instagram.com/ناوەکەت" class="link-btn instagram">لەگەڵمان بن لە ئینستاگرام</a>
+    <a href="tel:ژمارەکەت" class="link-btn call">کلیک بکە بۆ پەیوەندی ڕاستەوخۆ</a>
 
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
----
-
-<Layout title="Welcome to Astro.">
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
-    </p>
-</Layout>
+    <footer style="margin-top: 30px; font-size: 12px;">سیپۆنسەرکراوە لەلایەن Rabar Business</footer>
+</body>
+</html>
