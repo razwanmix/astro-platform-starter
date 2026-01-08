@@ -1,8 +1,8 @@
 ---
-// لێرە زانیارییەکان بگۆڕە - زۆر خێرایە
+// 1. لێرە زانیارییەکان بگۆڕە بۆ هەر کڕیارێکی نوێ
 const profile_image = "https://via.placeholder.com/150"; 
-const business_name = "ناوی بزنسەکە لێرەیە";
-const business_bio = "بەکورتی جۆری ئیشەکە لێرە بنووسە";
+const business_name = "ناوی کڕیار لێرە بنووسە";
+const business_bio = "جۆری ئیشەکە (بۆ نموونە: فرۆشتنی ئۆتۆمبێل)";
 ---
 
 <!DOCTYPE html>
@@ -57,41 +57,50 @@ const business_bio = "بەکورتی جۆری ئیشەکە لێرە بنووسە
             max-width: 380px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 14px;
         }
 
-        /* ستایلی دوگمەکان */
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 14px;
-            border-radius: 12px;
+            padding: 16px;
+            border-radius: 14px;
             text-decoration: none;
-            color: white;
             font-weight: 600;
             font-size: 16px;
             transition: 0.3s;
             position: relative;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.05);
         }
 
         .btn:hover { transform: scale(1.02); filter: brightness(1.1); }
-        .btn i { position: absolute; right: 20px; font-size: 20px; }
+        
+        /* چاککردنی ئایکۆنەکان */
+        .btn i { 
+            position: absolute; 
+            right: 20px; 
+            font-size: 22px; 
+            color: inherit; 
+        }
 
-        /* ڕەنگە ستانداردەکان بۆ ئەوەی تیکتۆک پێیان بزانێت */
-        .whatsapp { background-color: #25D366; }
-        .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-        .telegram { background-color: #0088cc; }
-        .snapchat { background-color: #fffc00; color: #000; }
-        .facebook { background-color: #1877f2; }
-        .viber { background-color: #7360f2; }
+        /* ڕەنگی دوگمەکان بە جیاوازی */
+        .whatsapp { background-color: #25D366; color: white !important; }
+        .instagram { 
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); 
+            color: white !important; 
+        }
+        .telegram { background-color: #0088cc; color: white !important; }
+        .snapchat { background-color: #fffc00; color: #000000 !important; }
+        .viber { background-color: #7360f2; color: white !important; }
+        .facebook { background-color: #1877f2; color: white !important; }
 
         footer {
             margin-top: auto;
             color: var(--text-gray);
             font-size: 11px;
             padding-top: 50px;
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -129,7 +138,7 @@ const business_bio = "بەکورتی جۆری ئیشەکە لێرە بنووسە
         </a>
     </div>
 
-    <footer>Sponsered by Rabar Business</footer>
+    <footer>POWED BY RABAR BUSINESS</footer>
 
 </body>
 </html>
