@@ -1,1 +1,115 @@
 
+---
+// 1. زانیارییەکان لێرە بگۆڕە
+const profile_image = "https://via.placeholder.com/150"; 
+const business_name = "ناوی کڕیار لێرە بنووسە";
+const business_bio = "جۆری ئیشەکە لێرە بنووسە";
+---
+
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{business_name}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #0a0c10;
+            --text-main: #ffffff;
+            --accent: #58a6ff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .profile-section { text-align: center; margin-bottom: 35px; }
+        .profile-img {
+            width: 100px; height: 100px; border-radius: 50%;
+            border: 3px solid var(--accent); padding: 5px; object-fit: cover;
+        }
+
+        .links-wrapper { width: 100%; max-width: 380px; display: flex; flex-direction: column; gap: 14px; }
+
+        /* ستایلی گشتی دوگمەکان */
+        .btn {
+            display: flex; align-items: center; justify-content: center;
+            padding: 16px; border-radius: 14px; text-decoration: none;
+            font-weight: 600; font-size: 16px; transition: 0.3s;
+            position: relative; border: none;
+        }
+
+        .btn:hover { transform: scale(1.02); filter: brightness(1.1); }
+        
+        /* چاککردنی ئایکۆنەکان بۆ ئەوەی سپێتی دروست نەکەن */
+        .btn i { 
+            position: absolute; right: 20px; font-size: 22px; 
+            background: none !important; /* لابردنی هەر باکگراوندێکی ناو ئایکۆن */
+            -webkit-background-clip: unset !important;
+        }
+
+        /* ڕەنگی دوگمەکان و دەقەکان */
+        .whatsapp { background-color: #25D366; color: #ffffff !important; }
+        .instagram { 
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); 
+            color: #ffffff !important; 
+        }
+        .telegram { background-color: #0088cc; color: #ffffff !important; }
+        .snapchat { background-color: #fffc00; color: #000000 !important; }
+        .viber { background-color: #7360f2; color: #ffffff !important; }
+        .facebook { background-color: #1877f2; color: #ffffff !important; }
+
+        /* دڵنیابوونەوە لەوەی ئایکۆنەکان ڕەنگیان وەک دەقەکەیە */
+        .btn i { color: inherit !important; }
+
+        footer { margin-top: auto; color: #8b949e; font-size: 11px; padding-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <div class="profile-section">
+        <img src={profile_image} alt="Profile" class="profile-img">
+        <h1 style="margin-top:15px;">{business_name}</h1>
+        <p style="color:#8b949e; margin-top:8px;">{business_bio}</p>
+    </div>
+
+    <div class="links-wrapper">
+        <a href="https://wa.me/964750xxxxxxx" class="btn whatsapp">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+
+        <a href="https://instagram.com/username" class="btn instagram">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+
+        <a href="https://t.me/username" class="btn telegram">
+            <i class="fab fa-telegram"></i> Telegram
+        </a>
+
+        <a href="https://snapchat.com/add/username" class="btn snapchat">
+            <i class="fab fa-snapchat"></i> Snapchat
+        </a>
+
+        <a href="viber://chat?number=964750xxxxxxx" class="btn viber">
+            <i class="fab fa-viber"></i> Viber
+        </a>
+
+        <a href="https://facebook.com/username" class="btn facebook">
+            <i class="fab fa-facebook"></i> Facebook
+        </a>
+    </div>
+
+    <footer>POWERED BY RABAR BUSINESS</footer>
+
+</body>
+</html>
