@@ -32,22 +32,28 @@ const my_logo = "/Razwan/MyLogo.png";
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            padding: 20px; /* کەمکردنەوەی پادینگ بۆ ئەوەی جێگەی هەموو شتێک ببێتەوە */
+            padding: 20px;
         }
 
-        .profile-section { text-align: center; margin-bottom: 25px; margin-top: 20px; }
+        .container {
+            width: 100%;
+            max-width: 380px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-section { text-align: center; margin-bottom: 20px; margin-top: 10px; }
         .profile-img {
-            width: 90px; height: 90px; border-radius: 50%;
+            width: 85px; height: 85px; border-radius: 50%;
             border: 3px solid var(--accent); padding: 5px; object-fit: cover;
         }
 
         .links-wrapper { 
             width: 100%; 
-            max-width: 380px; 
             display: flex; 
             flex-direction: column; 
             gap: 12px;
-            margin-bottom: 30px; /* مەودای سەلامەت بۆ خوارەوە */
         }
 
         .btn {
@@ -64,15 +70,14 @@ const my_logo = "/Razwan/MyLogo.png";
         .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #ffffff !important; }
         .telegram { background-color: #0088cc; color: #ffffff !important; }
         .snapchat { background-color: #fffc00; color: #000000 !important; }
-        .viber { background-color: #7360f2; color: #ffffff !important; }
-        .facebook { background-color: #1877f2; color: #ffffff !important; }
 
-        /* بەشی براندینگی RazwanBusiness */
-        .my-brand {
-            margin-top: auto;
-            padding: 20px 0;
+        /* بەشی براندینگ لە ناوەڕاست و ژێر دوگمەکان */
+        .my-brand-section {
+            margin-top: 25px;
+            padding: 15px;
             text-align: center;
             width: 100%;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .brand-link {
@@ -87,45 +92,47 @@ const my_logo = "/Razwan/MyLogo.png";
             width: 50px;
             height: 50px;
             border-radius: 10px;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             object-fit: cover;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .brand-text { font-size: 10px; color: #8b949e; letter-spacing: 0.5px; }
-        .brand-name { color: var(--accent); font-size: 14px; font-weight: bold; }
+        .brand-text { font-size: 11px; color: #8b949e; margin-bottom: 4px; }
+        .brand-name { color: var(--accent); font-size: 15px; font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <div class="profile-section">
-        <img src={profile_image} alt="Profile" class="profile-img">
-        <h1 style="margin-top:10px; font-size: 20px;">{business_name}</h1>
-        <p style="color:#8b949e; margin-top:5px; font-size: 13px;">{business_bio}</p>
-    </div>
+    <div class="container">
+        <div class="profile-section">
+            <img src={profile_image} alt="Profile" class="profile-img">
+            <h1 style="margin-top:10px; font-size: 19px;">{business_name}</h1>
+            <p style="color:#8b949e; margin-top:5px; font-size: 13px;">{business_bio}</p>
+        </div>
 
-    <div class="links-wrapper">
-        <a href="https://wa.me/964750xxxxxxx" class="btn whatsapp">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-        <a href="https://instagram.com/username" class="btn instagram">
-            <i class="fab fa-instagram"></i> Instagram
-        </a>
-        <a href="https://t.me/username" class="btn telegram">
-            <i class="fab fa-telegram"></i> Telegram
-        </a>
-        <a href="https://snapchat.com/add/username" class="btn snapchat">
-            <i class="fab fa-snapchat"></i> Snapchat
-        </a>
-    </div>
+        <div class="links-wrapper">
+            <a href="https://wa.me/964750xxxxxxx" class="btn whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://instagram.com/username" class="btn instagram">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://t.me/username" class="btn telegram">
+                <i class="fab fa-telegram"></i> Telegram
+            </a>
+            <a href="https://snapchat.com/add/username" class="btn snapchat">
+                <i class="fab fa-snapchat"></i> Snapchat
+            </a>
+        </div>
 
-    <footer class="my-brand">
-        <a href="https://wa.me/message/OT6XAQOZJJJRO1" class="brand-link" target="_blank">
-            <img src={my_logo} alt="Razwan Business" class="my-logo">
-            <span class="brand-text">سپۆنسەر کراوە لە لایەن:</span>
-            <span class="brand-name">Razwan Business</span>
-        </a>
-    </footer>
+        <div class="my-brand-section">
+            <a href="https://wa.me/message/OT6XAQOZJJJRO1" class="brand-link" target="_blank">
+                <span class="brand-text">سپۆنسەر کراوە لە لایەن:</span>
+                <img src={my_logo} alt="Razwan Business" class="my-logo">
+                <span class="brand-name">Razwan Business</span>
+            </a>
+        </div>
+    </div>
 
 </body>
 </html>
